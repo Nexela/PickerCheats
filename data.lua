@@ -1,3 +1,5 @@
+require('__stdlib__/core')
+
 require('prototypes/item-groups')
 require('prototypes/infinity-containers')
 require('prototypes/power')
