@@ -1,4 +1,4 @@
-require('__stdlib__/core')
+require('__stdlib__/stdlib/core')
 
 require('prototypes/item-groups')
 require('prototypes/infinity-containers')

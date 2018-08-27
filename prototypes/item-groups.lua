@@ -1,4 +1,4 @@
-local Data = require('__stdlib__/data/data')
+local Data = require('__stdlib__/stdlib/data/data')
 
 Data('other', 'item-group'):copy('picker-cheats'):set_fields {
     icon = '__PickerCheats__/graphics/creative-tools.png',

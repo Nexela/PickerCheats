@@ -1,8 +1,8 @@
 local path = '__PickerCheats__/graphics/icons/'
 
-local Entity = require('__stdlib__/data/entity')
-local Recipe = require('__stdlib__/data/recipe')
-local Item = require('__stdlib__/data/item')
+local Entity = require('__stdlib__/stdlib/data/entity')
+local Recipe = require('__stdlib__/stdlib/data/recipe')
+local Item = require('__stdlib__/stdlib/data/item')
 
 --------------------------------------------------------------------------------
 --[Infinity-Chests]--
