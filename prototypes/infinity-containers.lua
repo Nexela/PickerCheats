@@ -88,9 +88,9 @@ if settings.startup['picker-cheat-recipes'].value then
 end
 
 Entity('electric-energy-interface', 'electric-energy-interface'):copy('picker-electric-energy-interface')
-local heat_interface = Item('electric-energy-interface', 'item'):copy('picker-electric-energy-interface'):set_fields {stack_size = 100}:subgroup_order('picker-cheats-containers', 'z')
+local energy_interface = Item('electric-energy-interface', 'item'):copy('picker-electric-energy-interface'):set_fields {stack_size = 100}:subgroup_order('picker-cenergys-containers', 'z')
 if settings.startup['picker-cheat-recipes'].value then
-    heat_interface:remove_flag('hidden')
+    energy_interface:remove_flag('hidden')
     Recipe {
         type = 'recipe',
         name = 'picker-electric-energy-interface',
