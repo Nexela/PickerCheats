@@ -31,7 +31,6 @@ for name, effect in pairs(modules) do
         name = 'picker-cheats-module-' .. name,
         type = 'module',
         category = map[name],
-        flags = {'goes-to-main-inventory'},
         icon = icon_path .. 'super-' .. name .. '-module.png',
         icon_size = 32,
         subgroup = 'picker-cheats-modules',
