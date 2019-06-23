@@ -30,7 +30,7 @@ Entity('express-loader', 'loader'):copy(name):set_fields {
             }
         }
     }
-}
+}:remove_field('next_upgrade')
 
 local item = Item('loader', 'item'):copy(name)
 item:set_fields {stack_size = 100, icon = i_path .. 'super-loader.png'}:subgroup_order('picker-cheats-containers', 'l'):add_flag('hidden')
