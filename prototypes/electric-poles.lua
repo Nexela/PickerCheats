@@ -12,13 +12,14 @@ local function create_pole(from, name, gfx, order, distance, supply)
         Entity(from, 'electric-pole'):copy(name):set_fields {
         maximum_wire_distance = distance,
         supply_area_distance = supply,
-        icon = icon_path .. gfx
+        icon = icon_path .. gfx,
+        icon_size = 32
     }
     pole.pictures.filename = entity_path .. gfx
     pole.minable.mining_time = 0.5
 
     local item = Item(from, 'item'):copy(name)
-    item:set_field('icon', icon_path .. gfx):subgroup_order('picker-cheats-power', order)
+    item:set('icon', icon_path .. gfx):set('icon_size', 32):subgroup_order('picker-cheats-power', order)
     if recipes then
         item:Flags():remove('hidden')
         Recipe {

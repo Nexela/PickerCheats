@@ -10,6 +10,7 @@ local name = 'picker-cheats-super-loader'
 Entity('express-loader', 'loader'):copy(name):set_fields {
     gui_mode = 'admins',
     icon = i_path .. 'super-loader.png',
+    icon_size = 32,
     speed = 1,
     structure = {
         direction_in = {
@@ -33,7 +34,7 @@ Entity('express-loader', 'loader'):copy(name):set_fields {
 }:remove_field('next_upgrade')
 
 local item = Item('loader', 'item'):copy(name)
-item:set_fields {stack_size = 100, icon = i_path .. 'super-loader.png'}:subgroup_order('picker-cheats-containers', 'l'):add_flag('hidden')
+item:set_fields {stack_size = 100, icon_size = 32, icon = i_path .. 'super-loader.png'}:subgroup_order('picker-cheats-containers', 'l'):add_flag('hidden')
 
 if recipes then
     Recipe {

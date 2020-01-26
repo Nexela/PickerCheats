@@ -29,6 +29,7 @@ for i, new_name in ipairs({'picker-cheats-energy-void-active', 'picker-cheats-en
     local name = 'picker-electric-energy-interface'
     local type = 'electric-energy-interface'
     Entity(name, type):copy(new_name):set_fields {
+        icon_size = 32,
         icon = images.icon[i],
         energy_source = {
             type = 'electric',
@@ -41,7 +42,7 @@ for i, new_name in ipairs({'picker-cheats-energy-void-active', 'picker-cheats-en
         energy_usage = '500000GW',
     }
 
-    local item = Item(name, 'item'):copy(new_name):set_fields {icon = images.icon[i]}:subgroup_order('picker-cheats-power'):add_flag('hidden'):remove_field('icons')
+    local item = Item(name, 'item'):copy(new_name):set_fields {icon = images.icon[i], icon_size = 32}:subgroup_order('picker-cheats-power'):add_flag('hidden'):remove_field('icons')
 
     if recipes then
         item:Flags():remove('hidden')

@@ -7,7 +7,7 @@ local recipes = settings.startup['picker-cheat-recipes'].value
 local icon_path = '__PickerCheats__/graphics/icons/creative-lab.png'
 local entity_path = '__PickerCheats__/graphics/entities/creative-lab.png'
 
-local lab = Entity('lab', 'lab'):copy('picker-cheats-lab'):set('icon', icon_path)
+local lab = Entity('lab', 'lab'):copy('picker-cheats-lab'):set('icon', icon_path):set('icon_size', 32)
 lab.minable.mining_time = 0.5
 lab.on_animation = {
     filename = entity_path,
@@ -24,7 +24,7 @@ lab.energy_source = {type = 'void'}
 lab.energy_usage = '1W'
 
 local item = Item('lab', 'item'):copy('picker-cheats-lab')
-item:set_field('icon', icon_path):subgroup_order('picker-cheats-research', 'a')
+item:set_field('icon', icon_path):set_field('icon_size', 32):subgroup_order('picker-cheats-research', 'a')
 if recipes then
     item:Flags():remove('hidden')
     Recipe {

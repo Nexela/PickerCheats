@@ -10,6 +10,7 @@ local entity_path = '__PickerCheats__/graphics/entities/'
 
 local radar = Entity('radar', 'radar'):copy(name)
 radar.icon = icon_path
+radar.icon_size = 32
 radar.allowed_effects = {'consumption', 'speed', 'pollution', 'productivity'}
 radar.minable.mining_time = 0.5
 radar.energy_per_nearby_scan = '1J'
@@ -34,7 +35,7 @@ radar.pictures =
 		}
 
 local item = Item('radar', 'item'):copy(name)
-item:set_field('icon', icon_path):subgroup_order('picker-cheats-research', 'c')
+item:set('icon', icon_path):set('icon_size', 32):subgroup_order('picker-cheats-research', 'c')
 if recipes then
     item:Flags():remove('hidden')
     Recipe {

@@ -10,6 +10,7 @@ local entity_path = '__PickerCheats__/graphics/entities/'
 
 local beacon = Entity('beacon', 'beacon'):copy(name)
 beacon.icon = icon_path
+beacon.icon_size = 32
 beacon.allowed_effects = {'consumption', 'speed', 'pollution', 'productivity'}
 beacon.minable.mining_time = 0.5
 beacon.supply_area_distance = 64
@@ -48,7 +49,7 @@ beacon.animation_shadow = {
 
 
 local item = Item('beacon', 'item'):copy(name)
-item:set_field('icon', icon_path):subgroup_order('picker-cheats-research', 'b')
+item:set('icon', icon_path):set('icon_size', 32):subgroup_order('picker-cheats-research', 'b')
 if recipes then
     item:Flags():remove('hidden')
     Recipe {
